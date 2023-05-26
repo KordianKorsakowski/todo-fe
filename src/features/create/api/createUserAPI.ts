@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { AuthInterface } from '../types/types';
+import { CreateInterface } from '../types/types';
 
-export const createUserAPI = async (payload: AuthInterface) => {
+export const createUserAPI = async (payload: CreateInterface) => {
   console.log(process.env.NEXT_PUBLIC_API_URL);
   await axios
     .post(`${process.env.NEXT_PUBLIC_API_URL}/auth/signup`, {

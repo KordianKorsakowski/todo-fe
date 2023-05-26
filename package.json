@@ -6,7 +6,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "latest",
     "@emotion/styled": "^11.10.6",
     "@mui/material": "^5.11.14",
     "@types/node": "^16.18.25",
@@ -14,12 +13,16 @@
     "@types/react-dom": "^18.2.3",
     "axios": "^1.4.0",
     "formik": "^2.2.9",
+    "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "styled-components": "^5.3.10",
+    "styled-components": "^5.3.11",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4",
     "yup": "0.32.11"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.26"
   }
 }

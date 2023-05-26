@@ -2,13 +2,13 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { PropsWithChildren } from 'react';
 
-import { AuthInterface } from '../types/types';
+import { CreateInterface } from '../types/types';
 
-type FormAuthConfigProps = PropsWithChildren<{
-  initialValues: AuthInterface;
+type FormCreateConfigProps = PropsWithChildren<{
+  initialValues: CreateInterface;
 }>;
 
-export const AuthFormConfig = (props: FormAuthConfigProps) => {
+export const CreateFormConfig = (props: FormCreateConfigProps) => {
   const { children, initialValues } = props;
   const validation = Yup.object().shape({
     email: Yup.string().max(255).trim().required('Name is requierd'),
