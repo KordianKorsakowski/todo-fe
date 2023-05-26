@@ -5,5 +5,4 @@ export const SubmitBtnStyle = styled(Button)<{ disabled: boolean }>`
   max-width: max-content;
   display: flex;
   gap: 1rem;
-  background-color: ${({ disabled }) => (disabled ? `grey` : `blue`)}!important;
 `;

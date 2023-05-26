@@ -1,4 +1,5 @@
-import {SignupInterface } from '../types/types';
+import { SingupFormWrapper } from '../style/signupFormStyles.styles';
+import { SignupInterface } from '../types/types';
 import { SignupFormConfig } from './SignupFormConfig';
 import { SignupFormLogic } from './SignupFormLogic';
 
@@ -8,10 +9,10 @@ export const SignupForm = () => {
     password: '',
   };
   return (
-    <>
+    <SingupFormWrapper>
       <SignupFormConfig initialValues={initialValues}>
         <SignupFormLogic />
       </SignupFormConfig>
-    </>
+    </SingupFormWrapper>
   );
 };

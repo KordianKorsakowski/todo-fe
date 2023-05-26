@@ -11,8 +11,8 @@ export const LinkBtn: React.FC<SubmitBtnProps> = ({ text, route }) => {
   return (
     <LinkBtnStyle
       fullWidth
-      variant="contained"
-      color="primary"
+      variant="outlined"
+      color="secondary"
       onClick={() => {
         router.push(route);
       }}

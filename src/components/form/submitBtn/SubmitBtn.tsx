@@ -17,8 +17,8 @@ export const SubmitBtn: React.FC<SubmitBtnProps> = ({
     <SubmitBtnStyle
       type="submit"
       fullWidth
-      variant="contained"
-      color="primary"
+      variant="outlined"
+      color="secondary"
       onClick={submitFn}
       disabled={disabled}
     >
