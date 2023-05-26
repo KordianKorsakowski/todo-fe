@@ -1,14 +1,14 @@
 import { TextField, Grid } from '@mui/material';
 import { useFormikContext } from 'formik';
 import React from 'react';
-import { CreateInterface } from '../types/types';
+import { SignupInterface } from '../types/types';
 
 
 interface FormDishBodyProps {
   submitButton: JSX.Element;
 }
 
-export const CreateFormBody: React.FC<FormDishBodyProps> = ({
+export const SignupFormBody: React.FC<FormDishBodyProps> = ({
   submitButton,
 }) => {
   const {
@@ -19,12 +19,12 @@ export const CreateFormBody: React.FC<FormDishBodyProps> = ({
     touched,
     values,
     setFieldValue,
-  } = useFormikContext<CreateInterface>();
+  } = useFormikContext<SignupInterface>();
 
   return (
     <form noValidate onSubmit={handleSubmit}>
       <div>
-        <h4>CREATE</h4>
+        <h4>Signup</h4>
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <TextField

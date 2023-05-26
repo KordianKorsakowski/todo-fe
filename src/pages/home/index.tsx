@@ -1,3 +1,9 @@
+import { DashboardLayout } from '../../layout/DashboardLayout';
+
 export default function Home() {
-  return <div>test</div>;
+  return (
+    <DashboardLayout>
+      <div>test</div>
+    </DashboardLayout>
+  );
 }

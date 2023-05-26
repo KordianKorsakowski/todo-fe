@@ -1,32 +1,32 @@
 import { useFormikContext } from 'formik';
 import { useState } from 'react';
-import { CreateInterface } from '../types/types';
-import { CreateFormBody } from './CreateFormBody';
-import { createUserAPI } from '../api/createUserAPI';
+import { SignupInterface } from '../types/types';
+import { SignupFormBody } from './SignupFormBody';
+import { SignupUserAPI } from '../api/signupUserAPI';
 import { SubmitBtn } from '../../../components/form/submitBtn/SubmitBtn';
 
-export const CreateFormLogic = () => {
+export const SignupFormLogic = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const { values, isValid, resetForm, setSubmitting, dirty } =
-    useFormikContext<CreateInterface>();
+    useFormikContext<SignupInterface>();
 
   const submitHandler = async () => {
     setIsLoading(true);
-    await createUserAPI(values);
+    await SignupUserAPI(values);
     setIsLoading(false);
     resetForm();
   };
 
   return (
     <>
-      <CreateFormBody
+      <SignupFormBody
         submitButton={
           <SubmitBtn
             disabled={!(isValid && dirty)}
             submitFn={submitHandler}
             isLoading={isLoading}
-            text={'Create'}
+            text={'Signup'}
           />
         }
       />
