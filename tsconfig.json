@@ -19,7 +19,7 @@
       "noFallthroughCasesInSwitch": true,
       "incremental": true
     },
-    "include": ["src", "**/*.ts", "**/*.tsx", "./src/**/*", "types.d.ts"],
+    "include": ["src", "**/*.ts", "**/*.tsx", "./src/**/*", "types.d.ts", "next.config.js"],
     "exclude": ["node_modules", "i18next.d.ts"]
   }
   
