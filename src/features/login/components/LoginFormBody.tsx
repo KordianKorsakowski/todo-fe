@@ -24,7 +24,6 @@ export const LoginFormBody: React.FC<FormDishBodyProps> = ({
   return (
     <form noValidate onSubmit={handleSubmit}>
       <div>
-        <h4>Login</h4>
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <TextField
