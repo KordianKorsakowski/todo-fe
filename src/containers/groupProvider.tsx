@@ -1,6 +1,7 @@
 import { LoginProvider } from "./LoginContainer";
+import { SnackbarProvider } from "./SnackbarContainer";
 
-const providers = [LoginProvider];
+const providers = [LoginProvider, SnackbarProvider];
 
 export const ProviderGroup = ({ children }: any) => {
     const ReducedProviders = providers.reduceRight((children, Provider) => {
