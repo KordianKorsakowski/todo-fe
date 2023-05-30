@@ -5,4 +5,7 @@ export const routes = {
   home: {
     home: '/home',
   },
+  todo: {
+    todo: "/todo",
+  }
 };
