@@ -23,9 +23,9 @@ export const CreateTodoFormBody: React.FC<FormDishBodyProps> = ({
 
   return (
     <form noValidate onSubmit={handleSubmit}>
-      <div>
+      <div style={{width: "80vw"}}>
         <Grid container spacing={2}>
-          <Grid item xs={6}>
+          <Grid item xs={2}>
             <TextField
               name="priority"
               label={'priority'}
@@ -38,7 +38,7 @@ export const CreateTodoFormBody: React.FC<FormDishBodyProps> = ({
               required
             />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={10}>
             <TextField
               name="description"
               label={'description'}
