@@ -16,7 +16,7 @@ const SnackbarContainer = () => {
     setIsOpen(false);
   };
 
-  const setSnackBar = (data: snackBarInterface) => {
+  const setSnackbar = (data: snackBarInterface) => {
     setInfo({ text: data.text, type: data.type });
     onOpen();
   };
@@ -24,7 +24,7 @@ const SnackbarContainer = () => {
     isOpen,
     onOpen,
     onClose,
-    setSnackBar,
+    setSnackbar, 
     info
   };
 };

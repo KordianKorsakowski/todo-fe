@@ -10,8 +10,6 @@ type Props = {
 export const DashboardLayout: React.FC<Props> = ({ children }) => {
   return (
     <DashboardWrapper>
-      <CustomizedSnackbars />
-      {/* <GlobalStyles /> */}
       <Header />
       {children}
       <Footer />

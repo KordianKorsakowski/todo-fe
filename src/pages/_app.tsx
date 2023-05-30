@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 import type { AppProps } from 'next/app';
 import { ProviderGroup } from '../containers/groupProvider';
 import '../../styles/global.css';
+import { CustomizedSnackbars } from '../components/snackbar/Snackbar';
 
 type GetLayout = (page: ReactNode) => ReactNode;
 
@@ -21,6 +22,7 @@ export default function App(appProps: AdAppProps) {
 
   return (
     <ProviderGroup>
+        <CustomizedSnackbars />
        {getLayout(<Component {...pageProps} />)}
     </ProviderGroup>
   );

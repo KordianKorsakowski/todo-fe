@@ -2,7 +2,7 @@ import { useFormikContext } from 'formik';
 import { useState } from 'react';
 import { LoginInterface } from '../types/types';
 import { LoginFormBody } from './LoginFormBody';
-import { loginAPI } from '../api/loginAPI';
+import { loginAPI } from '../../../api/auth/loginAPI';
 import { SubmitBtn } from '../../../components/form/submitBtn/SubmitBtn';
 import { routes } from '../../../routes';
 import { useLogin } from '../../../containers/LoginContainer';
@@ -14,7 +14,7 @@ import { useSnackbar } from '../../../containers/SnackbarContainer';
 export const LoginFormLogic = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const router = useRouter();
-  const { setSnackBar } = useSnackbar();
+  const { setSnackbar } = useSnackbar();
   const { onClose } = useLogin();
 
   const { values, isValid, resetForm, setSubmitting, dirty } =
@@ -25,20 +25,20 @@ export const LoginFormLogic = () => {
     await loginAPI(values)
       .then((res) => {
         if (res.message) {
-          setSnackBar({ text: res.message, type: 'error' });
+          setSnackbar({ text: res.message, type: 'error' });
           return;
         }
-        setSnackBar({ text: 'Success', type: 'success' });
+        setSnackbar({ text: 'Success', type: 'success' });
         router.push(routes.todo.todo);
         onClose();
       })
-      .catch((err) => {
-        console.log('err', err);
+      .catch(() => {
+        setSnackbar({ text: "Error", type: 'error' });
       })
       .finally(() => {
         resetForm();
+        setIsLoading(false);
       });
-    setIsLoading(false);
   };
 
   return (

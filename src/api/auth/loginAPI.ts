@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { LoginInterface } from '../types/types';
+import { LoginInterface } from '../../features/login/types/types';
 
 export const loginAPI = async (payload: LoginInterface) => {
   console.log(process.env.NEXT_PUBLIC_API_URL);
